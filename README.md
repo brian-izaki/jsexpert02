@@ -15,7 +15,7 @@
 
 # Anotações
 
-## aula 01
+## Dia 01
 - visto: 
   - **websocket** foi configurado para realizar o processo de signaling, gerenciar o estado de sessão.
 - utilizado:
@@ -27,7 +27,7 @@
   - na public foi criado um *builder* para criar a conexão com o socket, assim permitindo verificar quem se juntou à sala ou que se disconectou da sala.
   - um controlador (*Business*) que gerencia as lógicas do socket, criar video captando a camera
 
-## aula 02
+## Dia 02
 - visto:
   - **WebRTC**: projeto open source para comunicação p2p, realiza acesso aos recursos de vídeo e audio
   - **signaling**: processo de coordenação da comunicação (exemplo: numero de telefone), ele vai ser o responsável por saber o que os usuários estão fazendo na plataforma.
@@ -40,6 +40,14 @@
 - desenvolvido: 
   - a comunicação p2p de mais de um usuário pela câmera.
 
+## Dia 03
+- Visto:
+  - MediaRecorder para gravar o que ta sendo transmitido pela webcam (alguns [browsers não suportam](https://caniuse.com/?search=media%20recorder) essa API)
+  - Para poder gravar é necessário passar um mimeType + codec e cada browser dá suporte a diferentes tipos de codecs, as opções adicionadas foram "codecs=vp9,opus" e "codecs=vp8,opus" para o mimeType "video/webm"
+- Desenvolvido:
+  - classe recorder, nela é montada o uso do MediaRecorder
+  - habilitado o botão para realizar as gravações
+  - os dados estão sendo armazenados no tipo Blob.
 ---
 
 ### Créditos
